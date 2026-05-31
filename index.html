@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahrheit oder Pflicht</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Player Setup Screen -->
+        <div id="setupScreen" class="screen active">
+            <h1>Wahrheit oder Pflicht</h1>
+            <div class="player-input">
+                <input type="text" id="playerName" placeholder="Name eingeben">
+                <button onclick="addPlayer()">Spieler hinzufügen</button>
+            </div>
+            <div id="playerList"></div>
+            <button id="startBtn" onclick="startGame()" style="display: none;">Spiel starten</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen">
+            <h2 id="currentPlayer"></h2>
+            <div class="choice-buttons">
+                <button onclick="getQuestion('truth')">Wahrheit</button>
+                <button onclick="getQuestion('dare')">Pflicht</button>
+            </div>
+        </div>
+
+        <!-- Question Screen -->
+        <div id="questionScreen" class="screen">
+            <h2 id="questionPlayer"></h2>
+            <div id="questionText"></div>
+            <button onclick="nextPlayer()">Nächster Spieler</button>
+            <button onclick="backToHome()" class="secondary">Zurück zum Menü</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
