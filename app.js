@@ -5,6 +5,10 @@ const CACHE_KEY = 'truthOrDarePlayers';
 let players = [];
 let currentPlayerIndex = 0;
 
+// Verwendete Fragen tracken
+let usedTruthQuestions = [];
+let usedDareQuestions = [];
+
 // Fragen
 const questions = {
     truth: [
@@ -151,10 +155,35 @@ function startGame() {
 // Frage abrufen
 function getQuestion(type) {
     const questionsArray = questions[type];
-    const randomQuestion = questionsArray[Math.floor(Math.random() * questionsArray.length)];
+    const usedQuestions = type === 'truth' ? usedTruthQuestions : usedDareQuestions;
+    
+    // Wenn alle Fragen verwendet wurden, Reset
+    if (usedQuestions.length >= questionsArray.length) {
+        if (type === 'truth') {
+            usedTruthQuestions = [];
+        } else {
+            usedDareQuestions = [];
+        }
+        alert('Alle Fragen wurden verwendet! Fragen werden zurückgesetzt.');
+    }
+    
+    // Verfügbare Fragen filtern
+    const availableQuestions = questionsArray.filter((q, index) => !usedQuestions.includes(index));
+    
+    // Zufällige Frage aus verfügbaren auswählen
+    const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+    const selectedQuestion = availableQuestions[randomIndex];
+    
+    // Original-Index finden und als verwendet markieren
+    const originalIndex = questionsArray.indexOf(selectedQuestion);
+    if (type === 'truth') {
+        usedTruthQuestions.push(originalIndex);
+    } else {
+        usedDareQuestions.push(originalIndex);
+    }
     
     document.getElementById('questionPlayer').textContent = players[currentPlayerIndex];
-    document.getElementById('questionText').textContent = randomQuestion;
+    document.getElementById('questionText').textContent = selectedQuestion;
     
     showScreen('questionScreen');
 }
@@ -174,6 +203,9 @@ function updateCurrentPlayer() {
 // Zurück zum Menü
 function backToHome() {
     currentPlayerIndex = 0;
+    // Reset verwendete Fragen beim Zurück zum Menü
+    usedTruthQuestions = [];
+    usedDareQuestions = [];
     showScreen('setupScreen');
 }
 
