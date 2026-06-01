@@ -36,24 +36,21 @@ const questions = {
         "Wer aus der Gruppe ist objektiv am attraktivsten",
         "Hast du schon mal jemanden aus dieser Gruppe attraktiv gefunden",
         "Schon mal Schanz gelutscht?",
+        "bewerte deinen letzten Kuss auf einer Skala von 1 - 10"
         
     ],
     dare: [
         "Mache 20 Liegestütze",
-        "Rufe jemanden an und singe ein Lied",
         "Tanze 1 Minute lang ohne Musik",
         "Rede 2 Minuten lang nur in Reimen",
-        "Poste ein peinliches Selfie",
-        "Lass jemand anderen deine nächste Nachricht schreiben",
         "Mache einen Handstand",
         "Sprich mit einem ausländischen Akzent für die nächsten 3 Runden",
         "Zeige die peinlichsten Fotos auf deinem Handy",
         "Ruf deine Eltern an und sag ihnen, dass du sie liebst",
-        "Mache 5 Minuten lang alles, was dir gesagt wird",
+        "Mache 2 Minuten lang alles, was dir gesagt wird",
         "Gib jemandem in der Runde eine Massage",
         "Iss etwas ohne die Hände zu benutzen",
         "Tausche dein Oberteil mit jemandem",
-        "Mache ein TikTok Video und poste es",
         "Zeig uns deine Brüste",
         "Eine Runde Nackt Baden mit Person anderen Geschlechts",
         "Du darfst zu einem random Moment deine Nase unauffällig berühren, der der es als letztes checkt und als letztes die eigene Nase berührt, muss ein Kleidungsstück ausziehen",
@@ -67,7 +64,15 @@ const questions = {
         "Imitiere eine Sex Pose bei der Person rechts von dir (anderes Geschlecht)",
         "Alkohol Runde, jeder nimmt 2 Schlücke seines alk. Getränks",
         "Sophia time to shine, knutsch mit der Wand",
-        "Lass dir eine Titten Massage geben von der Person rechts von dir (anderes geschlecht)"
+        "Lass dir eine Titten Massage geben von der Person rechts von dir (anderes geschlecht)",
+        "Anna Time to Shine mach dich nackig",
+        "Tausche mit der nächsten Person rechts von dir (anderes Geschlecht) die Klamotten",
+        "Du und eine Person deiner Wahl (anderew Geschlecht) müssen in einen Raum gehen und sich gegenseitig einmal ausziehen",
+        "Schicke ein Spicy Bild (Mind. Halbnackt) an eine Person (anderes Geschlecht) aus der Runde. Es muss ein einmal Bild auf Whatsapp sein und es darf nur die Person selber sehen",
+        "Arsch Klatscher, gebe der nächsten Person links von dir (anderes Geschlecht) einen Klatscher auf den fetten geilen Arsch",
+        "Massage Time, hau der Person 2 Plätze weiter rechts eine nette Massage rein (2 Minuten)",
+        "Michi Time to shine, zieh dich bis auf Tanga und BH aus für eine Runde",
+        "Time to shower dusche dich mit der Person rechts von dir (anderes Geschlecht) kurz ab"
     ]
 };
 
